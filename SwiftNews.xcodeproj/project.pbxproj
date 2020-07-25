@@ -17,6 +17,11 @@
 		66AF4C3424CC971100515C4D /* NewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C3324CC971100515C4D /* NewsArticleViewController.swift */; };
 		66AF4C3624CCA69A00515C4D /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C3524CCA69A00515C4D /* NewsListCell.swift */; };
 		66AF4C3C24CCD89E00515C4D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 66AF4C3B24CCD89E00515C4D /* Alamofire */; };
+		66AF4C3F24CCDA0100515C4D /* HTTPRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C3E24CCDA0100515C4D /* HTTPRouter.swift */; };
+		66AF4C4124CCDAA900515C4D /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4024CCDAA900515C4D /* NewsRouter.swift */; };
+		66AF4C4324CCDBA400515C4D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4224CCDBA400515C4D /* NetworkManager.swift */; };
+		66AF4C4524CCDD2100515C4D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4424CCDD2100515C4D /* Result.swift */; };
+		66AF4C4824CCDE8300515C4D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4724CCDE8300515C4D /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		66AF4C2624CC919B00515C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AF4C3324CC971100515C4D /* NewsArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewController.swift; sourceTree = "<group>"; };
 		66AF4C3524CCA69A00515C4D /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
+		66AF4C3E24CCDA0100515C4D /* HTTPRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRouter.swift; sourceTree = "<group>"; };
+		66AF4C4024CCDAA900515C4D /* NewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouter.swift; sourceTree = "<group>"; };
+		66AF4C4224CCDBA400515C4D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		66AF4C4424CCDD2100515C4D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		66AF4C4724CCDE8300515C4D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,8 @@
 		66AF4C0C24CC919A00515C4D /* SwiftNews */ = {
 			isa = PBXGroup;
 			children = (
+				66AF4C4624CCDD4200515C4D /* Network */,
+				66AF4C3D24CCD9EB00515C4D /* Model */,
 				66AF4C3024CC96BA00515C4D /* Features */,
 				66AF4C2F24CC96A700515C4D /* App Delegate */,
 				66AF4C1324CC919A00515C4D /* Main.storyboard */,
@@ -137,6 +149,25 @@
 				66AF4C3324CC971100515C4D /* NewsArticleViewController.swift */,
 			);
 			path = Article;
+			sourceTree = "<group>";
+		};
+		66AF4C3D24CCD9EB00515C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66AF4C4624CCDD4200515C4D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				66AF4C3E24CCDA0100515C4D /* HTTPRouter.swift */,
+				66AF4C4024CCDAA900515C4D /* NewsRouter.swift */,
+				66AF4C4224CCDBA400515C4D /* NetworkManager.swift */,
+				66AF4C4424CCDD2100515C4D /* Result.swift */,
+				66AF4C4724CCDE8300515C4D /* NetworkError.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,11 +277,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AF4C4524CCDD2100515C4D /* Result.swift in Sources */,
+				66AF4C4124CCDAA900515C4D /* NewsRouter.swift in Sources */,
 				66AF4C1224CC919A00515C4D /* NewsListViewController.swift in Sources */,
 				66AF4C3624CCA69A00515C4D /* NewsListCell.swift in Sources */,
+				66AF4C3F24CCDA0100515C4D /* HTTPRouter.swift in Sources */,
+				66AF4C4324CCDBA400515C4D /* NetworkManager.swift in Sources */,
 				66AF4C0E24CC919A00515C4D /* AppDelegate.swift in Sources */,
 				66AF4C3424CC971100515C4D /* NewsArticleViewController.swift in Sources */,
 				66AF4C1024CC919A00515C4D /* SceneDelegate.swift in Sources */,
+				66AF4C4824CCDE8300515C4D /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
