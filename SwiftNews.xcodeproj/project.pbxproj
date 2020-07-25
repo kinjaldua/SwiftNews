@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		66AF4C0E24CC919A00515C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C0D24CC919A00515C4D /* AppDelegate.swift */; };
 		66AF4C1024CC919A00515C4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C0F24CC919A00515C4D /* SceneDelegate.swift */; };
-		66AF4C1224CC919A00515C4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C1124CC919A00515C4D /* ViewController.swift */; };
+		66AF4C1224CC919A00515C4D /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C1124CC919A00515C4D /* NewsListViewController.swift */; };
 		66AF4C1524CC919A00515C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AF4C1324CC919A00515C4D /* Main.storyboard */; };
 		66AF4C1724CC919B00515C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AF4C1624CC919B00515C4D /* Assets.xcassets */; };
 		66AF4C1A24CC919B00515C4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AF4C1824CC919B00515C4D /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		66AF4C0A24CC919A00515C4D /* SwiftNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AF4C0D24CC919A00515C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66AF4C0F24CC919A00515C4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66AF4C1124CC919A00515C4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66AF4C1124CC919A00515C4D /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		66AF4C1424CC919A00515C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66AF4C1624CC919B00515C4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66AF4C1924CC919B00515C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				66AF4C0D24CC919A00515C4D /* AppDelegate.swift */,
 				66AF4C0F24CC919A00515C4D /* SceneDelegate.swift */,
-				66AF4C1124CC919A00515C4D /* ViewController.swift */,
+				66AF4C1124CC919A00515C4D /* NewsListViewController.swift */,
 				66AF4C1324CC919A00515C4D /* Main.storyboard */,
 				66AF4C1624CC919B00515C4D /* Assets.xcassets */,
 				66AF4C1824CC919B00515C4D /* LaunchScreen.storyboard */,
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AF4C1224CC919A00515C4D /* ViewController.swift in Sources */,
+				66AF4C1224CC919A00515C4D /* NewsListViewController.swift in Sources */,
 				66AF4C0E24CC919A00515C4D /* AppDelegate.swift in Sources */,
 				66AF4C1024CC919A00515C4D /* SceneDelegate.swift in Sources */,
 			);
@@ -365,14 +365,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G89WFY35LG;
 				INFOPLIST_FILE = SwiftNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.compassdigital.io.SwiftNews;
+				PRODUCT_BUNDLE_IDENTIFIER = io.compassdigital.discovery.SwiftNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,14 +384,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G89WFY35LG;
 				INFOPLIST_FILE = SwiftNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.compassdigital.io.SwiftNews;
+				PRODUCT_BUNDLE_IDENTIFIER = io.compassdigital.discovery.SwiftNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
