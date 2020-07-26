@@ -15,6 +15,7 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 400
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,15 +39,14 @@ extension NewsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let article = presenter.articlesArray?[indexPath.row]  else {
+        guard let article = presenter.articlesArray?[indexPath.row], let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath) as? NewsListCell  else {
             return UITableViewCell()
 
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath)
-        cell.textLabel?.text = article.title
+        
+        cell.configure(with: article)
         return cell
     }
-    
     
 }
 

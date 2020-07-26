@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pCq-Pp-sHa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,17 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NTD-wW-WRv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NTD-wW-WRv">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsListCell" rowHeight="122" id="EvO-J1-a2K" customClass="NewsListCell" customModule="SwiftNews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="122"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsListCell" rowHeight="409" id="EvO-J1-a2K" customClass="NewsListCell" customModule="SwiftNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="409"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EvO-J1-a2K" id="51c-uB-r8b">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq3-BA-CBq">
+                                                    <rect key="frame" x="20" y="16" width="374" height="125.5"/>
+                                                    <string key="text">Looking to gift my brother a course to get into iOS dev, would this course get him by to create his own apps eventually or would you recommend using what apple has to offer? I'd appreciate any other alternatives!</string>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mY2-BV-q1L">
+                                                    <rect key="frame" x="0.0" y="149.5" width="414" height="249.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="249.5" id="eLh-O5-wac"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mY2-BV-q1L" secondAttribute="trailing" id="7kC-9C-0tP"/>
+                                                <constraint firstItem="bq3-BA-CBq" firstAttribute="leading" secondItem="51c-uB-r8b" secondAttribute="leading" constant="20" id="AQR-ND-B9C"/>
+                                                <constraint firstItem="mY2-BV-q1L" firstAttribute="top" secondItem="bq3-BA-CBq" secondAttribute="bottom" constant="8" id="FFy-bO-yEj"/>
+                                                <constraint firstItem="bq3-BA-CBq" firstAttribute="top" secondItem="51c-uB-r8b" secondAttribute="top" constant="16" id="K1w-zp-mo1"/>
+                                                <constraint firstAttribute="bottom" secondItem="mY2-BV-q1L" secondAttribute="bottom" constant="10" id="oGr-U4-34z"/>
+                                                <constraint firstItem="mY2-BV-q1L" firstAttribute="leading" secondItem="51c-uB-r8b" secondAttribute="leading" id="oSe-Iz-AyS"/>
+                                                <constraint firstAttribute="trailing" secondItem="bq3-BA-CBq" secondAttribute="trailing" constant="20" id="rFm-nj-qIN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="thumbnailHeightConstraint" destination="eLh-O5-wac" id="Xas-o3-Hkq"/>
+                                            <outlet property="thumbnailImageView" destination="mY2-BV-q1L" id="YTZ-2v-ajj"/>
+                                            <outlet property="titleLabel" destination="bq3-BA-CBq" id="f7f-LJ-Sgo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
