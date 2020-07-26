@@ -11,9 +11,9 @@ import Foundation
 struct Article {
     var title: String
     var body: String
-    var thumbnail_width: Int?
-    var thumbnail_height: Int?
-    var thumbnail_url: String?
+    var thumbnailWidth: Int?
+    var thumbnailHeight: Int?
+    var thumbnailUrl: String?
     var contentUrl: String?
     var largeImage: Image?
     var kind: String

@@ -45,7 +45,7 @@ struct NewsManager {
                 let title = data["title"] as? String else { continue }
             
             let thumbnailUrl = data["thumbnail"] as? String
-            let contentUrl = data["url"] as? String 
+            let contentUrl = data["url"] as? String
             let kind = data["kind"] as? String ?? ""
             let thumbnailWidth = data["thumbnail_width"] as? Int
             let thumbnailHeight = data["thumbnail_height"] as? Int
@@ -55,7 +55,7 @@ struct NewsManager {
                 image = parseImageUrl(preview)
             }
             
-            let article = Article(title: title, body: content, thumbnail_width: thumbnailWidth, thumbnail_height: thumbnailHeight, thumbnail_url: thumbnailUrl, contentUrl: contentUrl, largeImage: image, kind: kind)
+            let article = Article(title: title, body: content, thumbnailWidth: thumbnailWidth, thumbnailHeight: thumbnailHeight, thumbnailUrl: thumbnailUrl, contentUrl: contentUrl, largeImage: image, kind: kind)
             array.append(article)
         }
         return array
