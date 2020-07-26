@@ -17,23 +17,30 @@ class NewsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 400
+        presenter.getNews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.getNews()
     }
 }
 
 extension NewsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let article = presenter.articlesArray?[indexPath.row]
-        //pass article object in segue
-        performSegue(withIdentifier: showArticleSegue, sender: article)
-
+        if let article = presenter.articlesArray?[indexPath.row] {
+            showFullArticle(article)
+        }
     }
     
+    func showFullArticle(_ article: Article?){
+         let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "NewsArticleNavigationController") as! UINavigationController
+         if let newsArticleViewController = navigationController.topViewController as? NewsArticleViewController {
+            newsArticleViewController.article = article
+            newsArticleViewController.presenter.article = article
+            show(newsArticleViewController, sender: nil)
+         }
+    }
 }
 
 extension NewsListViewController: UITableViewDataSource {
@@ -50,14 +57,6 @@ extension NewsListViewController: UITableViewDataSource {
         return cell
     }
     
-}
-
-extension NewsListViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == showArticleSegue, let nextViewController = segue.destination as? NewsArticleViewController, let article = sender as? Article {
-            nextViewController.article = article
-        }
-    }
 }
 
 extension NewsListViewController: NewsListDelegate {
