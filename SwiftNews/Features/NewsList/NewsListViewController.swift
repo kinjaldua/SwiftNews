@@ -9,7 +9,10 @@
 import UIKit
 
 class NewsListViewController: UIViewController {
-
+    @IBOutlet weak var emptyStateView: UIView!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var tableView: UITableView!
     lazy var presenter: NewsListPresenter = NewsListPresenter(delegate: self)
     let showArticleSegue = "showArticleSegue"
@@ -17,6 +20,7 @@ class NewsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 400
+        emptyStateView.isHidden = true
         presenter.getNews()
     }
     
@@ -60,8 +64,31 @@ extension NewsListViewController: UITableViewDataSource {
 }
 
 extension NewsListViewController: NewsListDelegate {
-    func reloadTableView() {
-        tableView.reloadData()
+    func showEmptyView() {
+        hideLoader()
+        tableView.isHidden = true
+        emptyStateView.isHidden = false
     }
     
+    func reloadTableView() {
+        emptyStateView.isHidden = true
+        tableView.isHidden = false
+        hideLoader()
+        tableView.reloadData()
+    }
+    func showLoader() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    func hideLoader()  {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+    }
+    
+}
+
+extension NewsListViewController {
+    @IBAction func reloadButtonTapped(_ sender: UIButton) {
+        presenter.getNews()
+    }
 }

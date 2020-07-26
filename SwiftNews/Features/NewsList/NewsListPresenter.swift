@@ -18,11 +18,16 @@ class NewsListPresenter {
     }
     
     func getNews(){
+        delegate?.showLoader()
         NewsManager.getAllNews { [weak self]  (result, data) in
-            guard let data = data as? [Article], let strongSelf = self else { return }
+            guard let data = data as? [Article], let strongSelf = self else {
+                self?.delegate?.showEmptyView()
+                return
+            }
             strongSelf.articlesArray = data
             strongSelf.delegate?.reloadTableView()
         }
+      
     }
     
     var numberOfRows: Int {

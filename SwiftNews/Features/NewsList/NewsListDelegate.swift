@@ -10,4 +10,7 @@ import Foundation
 
 protocol NewsListDelegate: class {
     func reloadTableView()
+    func showEmptyView()
+    func showLoader()
+    func hideLoader() 
 }
