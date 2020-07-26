@@ -26,6 +26,8 @@
 		66AF4C4C24CCE71100515C4D /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4B24CCE71100515C4D /* NewsManager.swift */; };
 		66AF4C4E24CD3A3100515C4D /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4D24CD3A3100515C4D /* NewsListPresenter.swift */; };
 		66AF4C5024CD3A4500515C4D /* NewsListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4F24CD3A4500515C4D /* NewsListDelegate.swift */; };
+		66AF4C5324CDAA4D00515C4D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 66AF4C5224CDAA4D00515C4D /* SDWebImage */; };
+		66AF4C5824CDC46A00515C4D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C5724CDC46A00515C4D /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		66AF4C4B24CCE71100515C4D /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		66AF4C4D24CD3A3100515C4D /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
 		66AF4C4F24CD3A4500515C4D /* NewsListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListDelegate.swift; sourceTree = "<group>"; };
+		66AF4C5724CDC46A00515C4D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AF4C5324CDAA4D00515C4D /* SDWebImage in Frameworks */,
 				66AF4C3C24CCD89E00515C4D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,7 @@
 		66AF4C0C24CC919A00515C4D /* SwiftNews */ = {
 			isa = PBXGroup;
 			children = (
+				66AF4C5624CDC45400515C4D /* Utilities */,
 				66AF4C2F24CC96A700515C4D /* App Delegate */,
 				66AF4C4624CCDD4200515C4D /* Network */,
 				66AF4C3D24CCD9EB00515C4D /* Model */,
@@ -182,6 +187,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		66AF4C5624CDC45400515C4D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				66AF4C5724CDC46A00515C4D /* String+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +213,7 @@
 			name = SwiftNews;
 			packageProductDependencies = (
 				66AF4C3B24CCD89E00515C4D /* Alamofire */,
+				66AF4C5224CDAA4D00515C4D /* SDWebImage */,
 			);
 			productName = SwiftNews;
 			productReference = 66AF4C0A24CC919A00515C4D /* SwiftNews.app */;
@@ -253,6 +267,7 @@
 			mainGroup = 66AF4C0124CC919A00515C4D;
 			packageReferences = (
 				66AF4C3A24CCD89E00515C4D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				66AF4C5124CDAA4D00515C4D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 66AF4C0B24CC919A00515C4D /* Products */;
 			projectDirPath = "";
@@ -302,6 +317,7 @@
 				66AF4C0E24CC919A00515C4D /* AppDelegate.swift in Sources */,
 				66AF4C3424CC971100515C4D /* NewsArticleViewController.swift in Sources */,
 				66AF4C1024CC919A00515C4D /* SceneDelegate.swift in Sources */,
+				66AF4C5824CDC46A00515C4D /* String+Extension.swift in Sources */,
 				66AF4C4824CCDE8300515C4D /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +597,14 @@
 				minimumVersion = 5.2.2;
 			};
 		};
+		66AF4C5124CDAA4D00515C4D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -588,6 +612,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 66AF4C3A24CCD89E00515C4D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		66AF4C5224CDAA4D00515C4D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66AF4C5124CDAA4D00515C4D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
