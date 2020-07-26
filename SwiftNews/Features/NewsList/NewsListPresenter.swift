@@ -10,7 +10,7 @@ import Foundation
 
 class NewsListPresenter {
    
-    private var delegate: NewsListDelegate?
+    private weak var delegate: NewsListDelegate?
     var articlesArray: [Article]?
     
     init(delegate: NewsListDelegate) {

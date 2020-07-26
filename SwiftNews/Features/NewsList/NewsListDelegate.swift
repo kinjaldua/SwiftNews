@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol NewsListDelegate {
+protocol NewsListDelegate: class {
     func reloadTableView()
 }
