@@ -61,7 +61,15 @@ extension NewsArticleViewController: UITableViewDataSource {
 extension NewsArticleViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let row = presenter.row(for: indexPath)
+        switch row {
+        case .body:
+            if let cell = tableView.cellForRow(at: indexPath) as? ArticleBodyCell {
+                cell.openUrl()
+            }
+        default:
+            return
+        }
     }
 }
 

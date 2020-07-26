@@ -17,14 +17,27 @@ class ArticleBodyCell: UITableViewCell {
         selectionStyle = .none
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func configure(with article: Article?) {
-        bodyLabel.text = article?.body.convertSpecialCharacters() ?? ""
+        if !(article?.body.isEmpty ?? false) {
+            bodyLabel.text = article?.body.convertSpecialCharacters() ?? ""
+        } else {
+            bodyLabel.text = article?.contentUrl ?? ""
+        }
+    }
+    
+    func openUrl(){
+        if  canVerifyUrl(), let url = URL(string: bodyLabel.text ?? "") {
+            return UIApplication.shared.open(url)
+        }
+    }
+    
+    func canVerifyUrl() -> Bool {
+        guard let urlString = bodyLabel.text,
+              let url = URL(string: urlString) else {
+            return false
+        }
+        return UIApplication.shared.canOpenURL(url)
     }
 
 }

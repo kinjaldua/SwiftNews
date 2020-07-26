@@ -27,7 +27,7 @@ class NewsArticlePresenter {
             rows.append(.image)
         }
         
-        if !article.body.isEmpty {
+        if !article.body.isEmpty || article.contentUrl != nil {
             rows.append(.body)
         }
         
