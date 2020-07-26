@@ -22,6 +22,8 @@
 		66AF4C4324CCDBA400515C4D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4224CCDBA400515C4D /* NetworkManager.swift */; };
 		66AF4C4524CCDD2100515C4D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4424CCDD2100515C4D /* Result.swift */; };
 		66AF4C4824CCDE8300515C4D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4724CCDE8300515C4D /* NetworkError.swift */; };
+		66AF4C4A24CCE66C00515C4D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4924CCE66C00515C4D /* Article.swift */; };
+		66AF4C4C24CCE71100515C4D /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF4C4B24CCE71100515C4D /* NewsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		66AF4C4224CCDBA400515C4D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		66AF4C4424CCDD2100515C4D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		66AF4C4724CCDE8300515C4D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		66AF4C4924CCE66C00515C4D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		66AF4C4B24CCE71100515C4D /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 		66AF4C3D24CCD9EB00515C4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				66AF4C4924CCE66C00515C4D /* Article.swift */,
+				66AF4C4B24CCE71100515C4D /* NewsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AF4C4A24CCE66C00515C4D /* Article.swift in Sources */,
 				66AF4C4524CCDD2100515C4D /* Result.swift in Sources */,
 				66AF4C4124CCDAA900515C4D /* NewsRouter.swift in Sources */,
 				66AF4C1224CC919A00515C4D /* NewsListViewController.swift in Sources */,
+				66AF4C4C24CCE71100515C4D /* NewsManager.swift in Sources */,
 				66AF4C3624CCA69A00515C4D /* NewsListCell.swift in Sources */,
 				66AF4C3F24CCDA0100515C4D /* HTTPRouter.swift in Sources */,
 				66AF4C4324CCDBA400515C4D /* NetworkManager.swift in Sources */,

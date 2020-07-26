@@ -24,7 +24,7 @@ public struct NetworkManager {
             switch responseObject.result {
             case .success(let value):
                 debugPrint("URL: \(urlRequest.url)")
-                debugPrint("Response: \(value)")
+              //  debugPrint("Response: \(value)")
 
                 
                 if let error = error(fromResponseObject: responseObject) {
