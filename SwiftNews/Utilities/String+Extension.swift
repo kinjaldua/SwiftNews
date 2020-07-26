@@ -16,7 +16,8 @@ extension String {
             "&lt;" : "<",
             "&gt;" : ">",
             "&quot;" : "\"",
-            "&apos;" : "'"
+            "&apos;" : "'",
+            "#x200B;" : " "
         ];
         for (escaped_char, unescaped_char) in char_dictionary {
             newString = newString.replacingOccurrences(of: escaped_char, with: unescaped_char, options: NSString.CompareOptions.literal, range: nil)

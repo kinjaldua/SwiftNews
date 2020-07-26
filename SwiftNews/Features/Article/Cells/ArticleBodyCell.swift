@@ -24,7 +24,7 @@ class ArticleBodyCell: UITableViewCell {
     }
     
     func configure(with article: Article?) {
-        bodyLabel.text = article?.body ?? ""
+        bodyLabel.text = article?.body.convertSpecialCharacters() ?? ""
     }
 
 }
