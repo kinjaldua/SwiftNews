@@ -107,8 +107,8 @@
 		66AF4C0C24CC919A00515C4D /* SwiftNews */ = {
 			isa = PBXGroup;
 			children = (
-				66AF4C5624CDC45400515C4D /* Utilities */,
 				66AF4C2F24CC96A700515C4D /* App Delegate */,
+				66AF4C5624CDC45400515C4D /* Utilities */,
 				66AF4C4624CCDD4200515C4D /* Network */,
 				66AF4C3D24CCD9EB00515C4D /* Model */,
 				66AF4C3024CC96BA00515C4D /* Features */,
@@ -150,10 +150,10 @@
 		66AF4C3124CC96C500515C4D /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
+				66AF4C5924CDC5BC00515C4D /* Cells */,
 				66AF4C1124CC919A00515C4D /* NewsListViewController.swift */,
 				66AF4C4D24CD3A3100515C4D /* NewsListPresenter.swift */,
 				66AF4C4F24CD3A4500515C4D /* NewsListDelegate.swift */,
-				66AF4C3524CCA69A00515C4D /* NewsListCell.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -193,6 +193,14 @@
 				66AF4C5724CDC46A00515C4D /* String+Extension.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		66AF4C5924CDC5BC00515C4D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				66AF4C3524CCA69A00515C4D /* NewsListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
