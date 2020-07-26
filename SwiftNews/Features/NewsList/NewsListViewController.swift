@@ -11,10 +11,15 @@ import UIKit
 class NewsListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    lazy var presenter: NewsListPresenter = NewsListPresenter(delegate: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.getNews()
     }
 
 }
@@ -23,17 +28,31 @@ class NewsListViewController: UIViewController {
 extension NewsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+       // let article = presenter.articlesArray?[indexPath.row]
     }
 }
 
 extension NewsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return presenter.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let article = presenter.articlesArray?[indexPath.row]  else {
+            return UITableViewCell()
+
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath)
+        cell.textLabel?.text = article.title
+        return cell
+    }
+    
+    
+}
+
+extension NewsListViewController: NewsListDelegate {
+    func reloadTableView() {
+        tableView.reloadData()
     }
     
     
